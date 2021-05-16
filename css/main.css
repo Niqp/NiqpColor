@@ -42,7 +42,7 @@ body {
     top: 1%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .logoFloat {
         display: none;
     }
@@ -54,7 +54,7 @@ body {
     min-height: 80vh;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .header {
         background-image: url(../img/background.jpg);
         background-position:center;
@@ -119,7 +119,7 @@ body {
   .vid-info .acronym { display: none; }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     .video-background {
         display: none;
     }
@@ -171,7 +171,7 @@ body {
     margin: 10px 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .videoName {
         opacity: 1;
         background: rgba(0, 0, 0, 0.3);
