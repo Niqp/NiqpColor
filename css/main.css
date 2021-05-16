@@ -1,0 +1,337 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background: black;
+    color:white;
+    font-family: "PT Sans", Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(2rem, 10vw, 4rem);
+    font-weight: 600;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 32px;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logoFloat {
+    position:fixed;
+    z-index: 999999;
+    left: 1%;
+    top: 1%;
+}
+
+@media (max-width: 800px) {
+    .logoFloat {
+        display: none;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+@media (max-width: 800px) {
+    .header {
+        background-image: url(../img/background.jpg);
+        background-position:center;
+        background-size: cover;
+    }
+}
+
+.title {
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.videoTemplate {
+    position: relative;
+    width: 50%;
+    height: 33vw;
+    overflow: hidden;
+}
+
+@media (max-width: 800px) {
+    .videoTemplate {
+        width: 100%;
+        height: 66vw;
+    }
+}
+
+.video-background {
+    background: #000;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+  }
+  .video-foreground,
+  .video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  @media (min-aspect-ratio: 16/9) {
+    .video-foreground { height: 300%; top: -100%; }
+  }
+  @media (max-aspect-ratio: 16/9) {
+    .video-foreground { width: 300%; left: -100%; }
+  }
+  @media all and (max-width: 600px) {
+  .vid-info { width: 50%; padding: .5rem; }
+  .vid-info h1 { margin-bottom: .2rem; }
+  }
+  @media all and (max-width: 500px) {
+  .vid-info .acronym { display: none; }
+  }
+
+  @media (max-width: 800px) {
+    .video-background {
+        display: none;
+    }
+
+    .video-foreground {
+        display: none;
+    }
+
+
+  }
+
+.videoTemplate:hover .videoBackground {
+    transform: scale(1.05);
+}
+
+.videoTemplate:hover .videoName {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.videoBackground {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.videoFlex p {
+    margin: 0;
+}
+
+.videoName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.videoName img {
+    height: 70px;
+    width: 70px;
+    margin: 10px 0;
+}
+
+@media (max-width: 800px) {
+    .videoName {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.clients {
+    background: #141414;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.clientList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.clientLogo {
+    max-width: 250px;
+    width: 50%;
+    padding: 10px 30px;
+}
+
+.clientLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contacts {
+    background: white;
+    color: black;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.contacts a {
+    font-size: 20px;
+    color: black;
+}
+
+.contact {
+    padding-bottom: 15px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0 5px;
+
+}
+
+.social-fb {
+    background-image: url(../img/socials/facebook.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-vk {
+    background-image: url(../img/socials/vk.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-in {
+    background-image: url(../img/socials/instagram.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-tg {
+    background-image: url(../img/socials/telegram.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 9px 9px;
+}
+
+.footer {
+    text-align: center;
+    background: #141414;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.videoPopup {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.videoPopup--open {
+    display: flex;
+}
+
+.videoPopup--closed {
+    display: none;
+}
+
+.videoPopupClose {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    right: 15px;
+    top: 15px;
+    transition: 0.5s;
+}
+
+.videoPopupClose:hover {
+    opacity: 0.5;
+}
+
+.videoFrame {
+    width: 982px;
+    position: relative;
+    background: black;
+    padding: 0;
+    height: 80%;
+}
+
+@media (max-width: 1000px) {
+    .videoFrame {
+        height: 0;
+        padding-top: 56.25%;
+    }   
+}
+
+.videoFrameBox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.videoFrameBox iframe {
+    width: 100%;
+    height: 100%;
+}
