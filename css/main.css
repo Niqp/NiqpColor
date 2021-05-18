@@ -80,6 +80,7 @@ body {
     width: 50%;
     height: 33vw;
     overflow: hidden;
+    cursor: pointer;
 }
 
 @media (max-width: 800px) {
