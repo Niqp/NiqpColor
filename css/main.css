@@ -49,6 +49,13 @@ body {
     top: 1%;
     text-decoration: none;
     color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+}
+
+.LanguageFloat:active {
+    background-color: rgba(15, 105, 178, 0.5);
 }
 
 @media (max-width: 1024px) {
