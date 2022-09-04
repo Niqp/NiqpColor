@@ -2,7 +2,7 @@ const POPUP_WINDOW = document.querySelector(".videoPopup");
 const POPUP_EMBED = document.querySelector(".popupEmbed");
 const LOADING_PORTFOLIO = document.querySelector(".loadingPortfolio");
 const PAGE_LANGUAGE = document.documentElement.lang;
-const VIDEO_DATA_LOCATION = "data/videos.json";
+const VIDEO_DATA_LOCATION = "/data/videos.json";
 
 
 const PopupAddButtonListener = () => {
